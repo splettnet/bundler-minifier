@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"workspaceContains:**/.bunmin"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.runBundler",
+				"title": "Bundler & Minifier: Run Bundler"
 			}
 		]
 	},
@@ -34,5 +34,9 @@
 		"tslint": "^5.12.1",
 		"@types/node": "^10.12.21",
 		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"fs": "0.0.1-security",
+		"terser": "^3.17.0"
 	}
 }
